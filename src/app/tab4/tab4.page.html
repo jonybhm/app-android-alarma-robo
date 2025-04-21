@@ -1,0 +1,47 @@
+<ion-header translucent>
+  <ion-toolbar color="primary">
+    <ion-title>Alarma Segura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <br>
+<div style="display: flex; justify-content: center;">
+  <img src="https://firebasestorage.googleapis.com/v0/b/sala-medica.firebasestorage.app/o/fotoPerfilpaciente%2Fhappy-woman-thinking-looking-at-side-at-home_jpg.png?alt=media&token=f56ce8ff-1361-47a5-b0ee-26754bb72b83" 
+  alt="Inicio sesion paciente" class="boton-login-usuario" (click)="Autocompletar('usuario1')">
+  <img src="https://firebasestorage.googleapis.com/v0/b/sala-medica.firebasestorage.app/o/fotoPerfilpaciente%2Flionel-messi-fue-a-la-cancha-y-sorprendio-a-todos-HDDKI5EXMRDABESAGAD2FMPUOQ_png.png?alt=media&token=276cc4ce-9af7-4232-a0b8-76a6377c55af" 
+  alt="Inicio sesion paciente" class="boton-login-usuario" (click)="Autocompletar('usuario2')">
+  <img src="https://firebasestorage.googleapis.com/v0/b/sala-medica.firebasestorage.app/o/fotoPerfilEspecialista%2Fcv.jpg?alt=media&token=97028fa5-de42-494b-b6ba-867f9b3e2741"
+  alt="Inicio sesion paciente" class="boton-login-usuario" (click)="Autocompletar('usuario3')">      
+</div>
+<br>
+
+  <ion-card>
+    <ion-card-header>Acceso de seguridad</ion-card-header>
+    <ion-img class="logo-app" src="../../assets/icon-only.png"></ion-img>
+
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input [(ngModel)]="usuario"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Clave</ion-label>
+      <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
+    </ion-item>
+    
+    <ion-button class="boton-inicio" expand="block" *ngIf="!logueado" (click)="IniciarSesion()">Entrar</ion-button>
+    <ion-button class="boton-inicio" expand="block" *ngIf="!logueado" fill="clear" (click)="Registrarse()">Registrarse</ion-button>
+    <ion-button class="boton-inicio" color="primary" *ngIf="logueado" (click)="CerrarSesion()">Cerrar sesión</ion-button>
+  </ion-card>
+
+
+</ion-content>
+
+
+
+
+

@@ -1,2 +1,16 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+:root {
+    // Usar el valor de 'tertiary' como 'primary'
+    --ion-color-primary: var(--ion-color-warning);
+    --ion-color-primary-rgb: var(--ion-color-warning-rgb);
+    --ion-color-primary-contrast: var(--ion-color-warning-contrast);
+    --ion-color-primary-contrast-rgb: var(--ion-color-warning-contrast-rgb);
+    --ion-color-primary-shade: var(--ion-color-warning-shade);
+    --ion-color-primary-tint: var(--ion-color-warning-tint);
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+  :root {
+    --ion-font-family: "Zen Dots", sans-serif;
+  }

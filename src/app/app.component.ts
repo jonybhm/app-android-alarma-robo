@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
+
+  showSplash = true;
+
+  ngOnInit() 
+  {
+    setTimeout(() => {
+      this.showSplash = false;
+    }, 4000);
+  }
 }
