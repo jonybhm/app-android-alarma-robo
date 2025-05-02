@@ -1,0 +1,20 @@
+ion-card {
+    margin-top: 50px;
+    height: 83vh;
+    width: 95vw;
+    margin: auto;
+  }
+  
+  ion-card-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .boton {
+    width: auto;
+    height: 300px; 
+    max-height: 100%;
+    max-width: 100%;
+  }
