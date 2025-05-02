@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  public mi_color:string;
+  alarmaActivada:boolean = false;
 
   constructor() {
-    this.mi_color = "";
+
   }
-
-  CambiarColor(color: string){
-
-    this.mi_color = color;
+  
+  activarCarta() 
+  {
+    this.alarmaActivada = !this.alarmaActivada;
   }
 
 }

@@ -1,15 +1,8 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Activá la alarma!!!
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true" >
-  <ion-card color="primary">
+  <ion-card color="primary" (click)="activarCarta()">
     <ion-card-content> 
-      <img src="../../assets/sombrero-pirata.png" alt="alarmaApagada"  class="boton">
+      <img [src]="alarmaActivada ? '../../assets/alarma-activa.png' : '../../assets/alarma-inactiva.png'" alt="alarma"  class="boton" [ngClass]="{'pulse-animacion': alarmaActivada}">
     </ion-card-content>
   </ion-card>
 </ion-content>

@@ -1,8 +1,7 @@
 ion-card {
-    margin-top: 50px;
-    height: 83vh;
-    width: 95vw;
-    margin: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;
   }
   
   ion-card-content {
@@ -17,4 +16,19 @@ ion-card {
     height: 300px; 
     max-height: 100%;
     max-width: 100%;
+    
+  }
+  .pulse-animacion {
+    animation: pulse 1s infinite alternate;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 10px rgb(245, 124, 124));
+    }
+    100% {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 20px rgb(245, 124, 124));
+    }
   }
