@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="cerrar()">Cerrar</ion-button>
+      </ion-buttons>
+      
+    </ion-toolbar>
+    <ion-item>
+      <ion-label position="floating">Ingrese su clave:</ion-label>
+      <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
+
+      <ion-button class="boton-inicio" expand="block" (click)="enviar()">Aceptar</ion-button>
+
+    </ion-item>
+  </ion-content>
+</ion-content>

@@ -12,6 +12,8 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
 import { SplashPage } from './splash/splash.page';
+import { Flashlight } from '@awesome-cordova-plugins/flashlight/ngx';
+import { Vibration } from '@awesome-cordova-plugins/vibration/ngx';
 
 
 
@@ -23,6 +25,8 @@ import { SplashPage } from './splash/splash.page';
       provideAuth(() => getAuth()), 
       provideFirestore(() => getFirestore()), 
       provideStorage(() => getStorage()), 
+      Flashlight,
+      Vibration
       ],
   bootstrap: [AppComponent],
 })

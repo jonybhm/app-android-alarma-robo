@@ -13,7 +13,11 @@ const routes: Routes = [
   {
     path: 'splash',
     loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+  },  {
+    path: 'clave-modal',
+    loadChildren: () => import('./clave-modal/clave-modal.module').then( m => m.ClaveModalPageModule)
   }
+
 
 ];
 @NgModule({
