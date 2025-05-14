@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { SonidosService } from '../servicios/sonidos.service';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';  
 
 @Component({
   selector: 'app-tabs',
@@ -8,6 +11,21 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+    constructor(
+    private router: Router,
+    private sonidosService: SonidosService
+  ) {
+        this.escucharCambiosDeRuta();
+  }
+
+  escucharCambiosDeRuta() 
+  {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        console.log('Cambiando de ruta a:', event.url);
+        this.sonidosService.ejecutarSonido('navegacion');
+      });
+  }
 
 }

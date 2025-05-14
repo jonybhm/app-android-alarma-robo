@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SonidosService } from '../servicios/sonidos.service';
 
 @Component({
   selector: 'app-splash',
@@ -10,11 +11,13 @@ import { Router } from '@angular/router';
 export class SplashPage implements OnInit {
 
   constructor(
-    public router:Router
+    public router:Router,
+    
+        private sonido: SonidosService
   ) { }
 
   ngOnInit(
-  ) {
-  }
+  ) {    this.sonido.ejecutarSonido('intro');
 
+  }
 }

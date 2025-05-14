@@ -1,4 +1,5 @@
 <ion-app>
   <app-splash *ngIf="showSplash"></app-splash>
+  <app-spinner [visible]="isLoading"></app-spinner>
   <ion-router-outlet *ngIf="!showSplash"></ion-router-outlet>
 </ion-app>

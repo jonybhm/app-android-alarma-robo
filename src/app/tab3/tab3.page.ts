@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Flashlight } from '@awesome-cordova-plugins/flashlight/ngx';
 import { AlertController } from '@ionic/angular';
 import { getAuth, EmailAuthProvider, reauthenticateWithCredential } from "firebase/auth";
@@ -7,6 +7,7 @@ import { ErrorService } from '../servicios/error-toast.service';
 import { Vibration } from '@awesome-cordova-plugins/vibration/ngx';
 import { ModalController } from '@ionic/angular';
 import { ClaveModalPage } from '../clave-modal/clave-modal.page';
+import { SpinnerService } from '../servicios/spinner.service';
 
 @Component({
   selector: 'app-tab3',
@@ -14,7 +15,7 @@ import { ClaveModalPage } from '../clave-modal/clave-modal.page';
   styleUrls: ['tab3.page.scss'],
   standalone: false,
 })
-export class Tab3Page {
+export class Tab3Page implements OnInit{
 
   alarmaActivada:boolean = false;
   orientacionListener: any;
@@ -30,11 +31,19 @@ export class Tab3Page {
     private flashlight: Flashlight,
     private vibration: Vibration,
     private error: ErrorService,
+        private spinner: SpinnerService,
+
     private modalController: ModalController
   ) {
 
   }
-  
+  ngOnInit(): void {
+    this.spinner.show();
+
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 2000);
+  }
   activarAlarma() 
   {
   
